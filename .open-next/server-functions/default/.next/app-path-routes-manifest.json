@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/calendar/page": "/calendar",
+  "/cotizacion/page": "/cotizacion",
+  "/descarga-app/page": "/descarga-app",
+  "/favicon.ico/route": "/favicon.ico",
+  "/nosotros/page": "/nosotros",
+  "/page": "/",
+  "/robots.txt/route": "/robots.txt",
+  "/servicios/agenciamiento-aduana/page": "/servicios/agenciamiento-aduana",
+  "/servicios/agenciamiento-carga/page": "/servicios/agenciamiento-carga",
+  "/servicios/desaduanaje/page": "/servicios/desaduanaje",
+  "/servicios/seguro-internacional/page": "/servicios/seguro-internacional",
+  "/servicios/transporte-local/page": "/servicios/transporte-local",
+  "/sitemap.xml/route": "/sitemap.xml"
+}
