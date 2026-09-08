@@ -953,6 +953,15 @@ li {
         flex-direction: column;
         justify-self: start;
     }
+    .imgWithMessage-text-description{
+        font-size: 1rem;
+    }
+    .imgWithMessage-text-subtitle{
+        font-size: 1.6rem;
+    }
+    .imgWithMessage-text-title{
+        font-size: 38px;
+    }
 }
 @media (max-width:455px) {
     .imgWithMessage-text-subtitle-highligh{
