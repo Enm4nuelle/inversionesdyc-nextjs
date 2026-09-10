@@ -30,11 +30,6 @@
                         "sublinks": ""
                     },
                     {
-                        "text": "Nosotros",
-                        "href": "/nosotros",
-                        "sublinks": ""
-                    },
-                    {
                         "text": "Servicios",
                         "href": "",
                         "sublinks": [
@@ -272,11 +267,7 @@
                 "pixelsAnimationButton": 80,
                 "durationAnimationButton": 1000,
                 "delayAnimationButton": 0,
-                "buttonMoreInformation": {
-                    "text": "Ver Más",
-                    "href": "/nosotros",
-                    "type": "primary"
-                }
+                "buttonMoreInformation": ""
             },
             "order": 4
         },
@@ -689,7 +680,7 @@
                 "iconStarComplete": "fa fa-solid fa-star",
                 "iconStarHalf": "fa fa-solid fa-star-half-stroke",
                 "iconStarEmpty": "fa fa-regular fa-star",
-                "iconLocation": "fa fa-solid fa-location-dot",
+                "iconLocation": "",
                 "buttonAtSides": true,
                 "alignStart": "center",
                 "delayAutoPlay": 4000,
@@ -701,38 +692,45 @@
                 "delayAnimationHeader": "",
                 "testimonies": [
                     {
-                        "img": "/img/imagenesInicio/importacionTestimonios1.jpg",
-                        "title": "Importación de Maquinaria",
-                        "location": "Maquinarias del Pacífico S.A.C.",
-                        "description": "Gracias al acompañamiento de Inversiones D&C logramos importar nuestra maquinaria sin inconvenientes. Se encargaron de la coordinación con el proveedor y de todo el proceso logístico hasta la entrega.",
+                        "img": "/img/imagenesInicio/importacionTestimonios1.webp",
+                        "title": "Retroexcavadora de Alta Precisión",
+                        "location": "El cliente necesitaba la retroexcavadora para evitar la paralización de sus maquinarias. En Inversiones D&C Perú SAC nos encargamos de gestionar el transporte internacional, el desaduanaje eficiente y el aforo seguro. Evitamos sobrecostos de almacenaje en puerto y garantizamos que la pieza delicada llegara intacta hasta el contenedor de destino.",
+                        "description": "Gracias al equipo de D&C, mi carga llegó a tiempo y segura; ahora mi maquinaria está lista para operar sin pérdidas.",
                         "numStars": 5
                     },
                     {
-                        "img": "/img/imagenesInicio/importacionTestimonios2.jpg",
-                        "title": "Carga Consolidada",
-                        "location": "Comercial Andina S.A.C.",
-                        "description": "Fue nuestra primera importación desde China y el equipo nos brindó asesoría en cada etapa. Todo llegó dentro del tiempo previsto y con una excelente atención.",
+                        "img": "/img/imagenesInicio/importacionTestimonios2.webp",
+                        "title": "Excavadora Caterpillar 320",
+                        "location": "El cliente necesitaba la excavadora para potenciar sus proyectos de construcción, pero el proceso de importación le daba dudas. En Inversiones D&C Perú SAC nos encargamos de la gestión aduanera y logística hasta la entrega final. Coordinamos el desaduanaje y un tránsito fluido hasta las instalaciones del cliente. Hoy nuestro cliente puede enfocarse en construir el futuro.",
+                        "description": "D&C hizo que importar esta excavadora pareciera fácil. Su equipo estuvo presente en todo momento, y hoy mi maquinaria ya está en la obra.",
                         "numStars": 5
                     },
                     {
-                        "img": "/img/imagenesInicio/importacionTestimonios3.jpg",
-                        "title": "Productos Industriales",
-                        "location": "Industrias Nova Perú",
-                        "description": "Importar desde Brasil fue un proceso mucho más sencillo de lo que imaginábamos. Recibimos un servicio profesional y un seguimiento constante durante toda la operación.",
+                        "img": "/img/imagenesInicio/importacionTestimonios3.webp",
+                        "title": "Importación de Contenedor",
+                        "location": "Elmer necesitaba importar un contenedor asegurando que la carga llegara intacta y a tiempo al Callao. En Inversiones D&C Perú SAC gestionamos la logística marítima, la supervisión en campo y el desaduanaje eficiente. Evitamos costos extra por demora o almacenaje y garantizamos que la mercancía quedara lista para su entrega final.",
+                        "description": "Traer mi contenedor desde el extranjero lucía complejo, pero con D&C mi importación llegó a tiempo, segura y sin pagar un sol extra.",
                         "numStars": 4.8
                     },
                     {
-                        "img": "/img/imagenesInicio/importacionTestimonios4.jpg",
-                        "title": "Equipos Comerciales",
-                        "location": "AgroExport Perú S.A.C.",
-                        "description": "Encontramos proveedores confiables y contamos con el respaldo de Inversiones D&C para gestionar el transporte, la documentación y el despacho de nuestra mercancía.",
+                        "img": "/img/imagenesInicio/importacionTestimonios4.webp",
+                        "title": "Excavadora Caterpillar 336DL",
+                        "location": "Nos trasladamos al patio de carga para la inspección de una excavadora Caterpillar 336D L previa a su importación. En Inversiones D&C Perú SAC verificamos números de serie y estado de componentes en campo para asegurar un embarque y desaduanaje exitosos. Garantizamos una logística transparente y validamos la inversión de nuestros clientes en maquinaria pesada.",
+                        "description": "Poder ver la 336D L en persona y tener a D&C revisando todo, me confirmó que mi inversión estaba segura antes del viaje a Perú.",
                         "numStars": 5
                     },
                     {
-                        "img": "/img/imagenesInicio/importacionTestimonios5.jpg",
-                        "title": "Mercancía Especializada",
-                        "location": "Corporación Global Trade",
+                        "img": "/img/imagenesInicio/importacionTestimonios5.webp",
+                        "title": "Excavadora Caterpillar 329D2L",
+                        "location": "Un cliente nos confió el transporte terrestre de su excavadora Caterpillar 329D2L. En Inversiones D&C Perú SAC gestionamos la operativa en cama baja (lowboy), supervisando el trincado y traslado nocturno bajo estrictas normativas. Garantizamos un viaje seguro y la entrega a tiempo para que la maquinaria inicie operaciones de inmediato.",
                         "description": "El proceso de importación fue claro, seguro y eficiente. La asesoría personalizada nos permitió evitar retrasos y recibir nuestra carga sin contratiempos.",
+                        "numStars": 5
+                    },
+                    {
+                        "img": "/img/imagenesInicio/importacionTestimonios6.webp",
+                        "title": "Camión de Asfalto",
+                        "location": "La Srta. Rosa confió en nosotros para la importación de su camión de asfalto. En Inversiones D&C Perú SAC brindamos una atención cercana y continua, gestionando cada etapa del proceso con una comunicación fluida desde el primer contacto. Garantizamos un acompañamiento integral de principio a fin, logrando una entrega exitosa y sin contratiempos.",
+                        "description": "Trabajar con D&C ha sido muy suave desde la comunicación hasta el momento de la entrega. Han estado presentes en todas las etapas de mi importación.",
                         "numStars": 5
                     }
                 ]

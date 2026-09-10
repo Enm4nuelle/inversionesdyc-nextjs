@@ -10,12 +10,6 @@ export default function sitemap() {
             priority: 1,
         },
         {
-            url: `${JsonData.urlDomain}nosotros`,
-            lastModified: today,
-            changeFrequency: "monthly",
-            priority: 0.9,
-        },
-        {
             url: `${JsonData.urlDomain}servicios/agenciamiento-aduana`,
             lastModified: today,
             changeFrequency: "monthly",

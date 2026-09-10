@@ -23,7 +23,12 @@ export const CarrouselTestimonies = (props) => {
                 <footer className="carrouselTestimonies-testimonies-item-detail-location">
                     <h3 className="carrouselTestimonies-testimonies-item-detail-location-title">{testim.title}</h3>
                     <p className="carrouselTestimonies-testimonies-item-detail-location-country">
-                        <i className={"carrouselTestimonies-testimonies-item-detail-location-country-icon " + props.data.iconLocation}></i>
+                        {
+                            props.data.iconLocation ?
+                            <i className={"carrouselTestimonies-testimonies-item-detail-location-country-icon " + props.data.iconLocation}></i>
+                            :
+                            ""
+                        }
                         {testim.location}
                     </p>
                     <div className="carrouselTestimonies-testimonies-item-detail-location-stars">
