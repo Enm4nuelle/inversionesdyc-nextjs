@@ -1,6 +1,6 @@
 {
     "urlDomain": "https://inversionesdycperu.pe/",
-    "ogImage": "/img/imagenesInicio/imagenOg.jpg",
+    "ogImage": "https://inversionesdycperu.pe/img/imagenesInicio/imagenOg.jpg",
     "keyWeb3Form": "d8c5e393-1d02-44da-b117-6c14d145e123",
     "locationCompany": {
         "streetAddress": "Calle Capitán Guitierrez Rondón, 196 - Miraflores, Lima, Perú 15074",
