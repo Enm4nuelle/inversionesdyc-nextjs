@@ -11,6 +11,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}calendar`,
         title: "Calendario | Inversiones D&C",
         description: "Agenda una cita con Inversiones D&C para entender a fondo tu importación y darte una buena cotización.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

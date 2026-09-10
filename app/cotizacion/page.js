@@ -11,6 +11,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}cotizacion`,
         title: "Solicita tu Cotización | Inversiones D&C",
         description: "Solicita una cotización de importación a Perú. Completa tus datos de contacto y cuéntanos qué clase de importación deseas realizar.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

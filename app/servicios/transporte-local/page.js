@@ -12,6 +12,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}servicios/transporte-local`,
         title: "Transporte Local | Inversiones D&C",
         description: "Trasladamos tu mercancía desde el puerto o aeropuerto de llegada hasta tus almacenes en cualquier punto del Perú, con seguimiento durante toda la entrega.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

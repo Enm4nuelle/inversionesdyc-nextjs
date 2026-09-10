@@ -12,6 +12,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}servicios/desaduanaje`,
         title: "Desaduanaje | Inversiones D&C",
         description: "Agilizamos el levante de tu mercancía en aduanas, gestionando la documentación y trámites necesarios para nacionalizar tu carga sin retrasos ni sobrecostos.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

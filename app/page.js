@@ -33,6 +33,10 @@ export const metadata = {
         url: JsonData.urlDomain,
         title: "Inversiones D&C | Importaciones y Logística Internacional",
         description: "Te conectamos con proveedores en China, India, Brasil y EE.UU. y gestionamos toda tu importación de principio a fin.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

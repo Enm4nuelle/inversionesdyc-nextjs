@@ -31,6 +31,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}nosotros`,
         title: "Nuestro Equipo | Inversiones D&C",
         description: "Conoce a las personas detrás de Inversiones D&C: fundadora, gerencia, y áreas comercial y de operaciones.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

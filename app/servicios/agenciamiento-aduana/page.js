@@ -12,6 +12,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}servicios/agenciamiento-aduana`,
         title: "Agenciamiento de Aduana | Inversiones D&C",
         description: "Servicio integral de gestión aduanera para importación, exportación y transporte de mercancías, cumpliendo la normativa vigente.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

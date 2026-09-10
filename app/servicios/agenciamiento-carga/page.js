@@ -12,6 +12,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}servicios/agenciamiento-carga`,
         title: "Agenciamiento de Carga | Inversiones D&C",
         description: "Gestionamos el transporte internacional de tu carga marítima o aérea desde el origen hasta el destino, coordinando con navieras y almacenes para que tu mercancía llegue segura y a tiempo.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 

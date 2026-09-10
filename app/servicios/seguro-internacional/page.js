@@ -12,6 +12,10 @@ export const metadata = {
         url: `${JsonData.urlDomain}servicios/seguro-internacional`,
         title: "Seguro Internacional | Inversiones D&C",
         description: "Protege tu mercancía durante todo el trayecto internacional con una cobertura ante daños, pérdidas o imprevistos en el transporte, desde el proveedor hasta tu almacén en Perú.",
+        siteName: "Inversiones D&C",
+        images: [JsonData.ogImage],
+        locale: "es_PE",
+        type: "website",
     },
 };
 
