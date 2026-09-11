@@ -30,6 +30,11 @@
                         "sublinks": ""
                     },
                     {
+                        "text": "Nosotros",
+                        "href": "/nosotros",
+                        "sublinks": ""
+                    },
+                    {
                         "text": "Servicios",
                         "href": "",
                         "sublinks": [
@@ -839,7 +844,7 @@
                     
                 ],
                 
-                "img": "/img/imagenesNosotros/imagenPortada.jpg",
+                "img": "/img/imagenesNosotros/imagenPortada.webp",
                 "altImg": "Foto Grupal del equipo de Inversiones D&C"
             },
             "order": 2
@@ -856,7 +861,7 @@
                 "subTitle": "¿Qué es Inversiones D&C?",
                 "description": "Inversiones D&C es un Operador Logístico Internacional que brinda soluciones de logística y comercio internacional, facilitando la importación de mercancías hacia el Perú. Acompañamos a nuestros clientes en cada etapa del proceso, ofreciendo un servicio seguro, eficiente y confiable.",
                 "peopleDown": true,
-                "imgRight": "/img/imagenesNosotros/imagenNosotros.jpg",
+                "imgRight": "/img/imagenesNosotros/imagenNosotros.webp",
                 "altImgRight": "Equipo de Inversiones D&C",
                 "typeAnimationText": "left",
                 "pixelsAnimationText": 80,
@@ -897,7 +902,7 @@
                     {
                         "name": "Cristina Gonzales",
                         "position": "Gerente General",
-                        "img": "/img/imagenesNosotros/CRISTINA.jpg",
+                        "img": "/img/imagenesNosotros/CRISTINA.webp",
                         "linkedin": "https://www.linkedin.com/in/cristina-gonzales-llactahuamani/",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
@@ -905,42 +910,42 @@
                     {
                         "name": "Yudith Chambilla",
                         "position": "Ejecutiva Comercial",
-                        "img": "/img/imagenesNosotros/YUDITH.jpg",
+                        "img": "/img/imagenesNosotros/YUDITH.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
                     {
                         "name": "Sandra Rojas",
                         "position": "Ejecutiva Comercial",
-                        "img": "/img/imagenesNosotros/SANDRA.jpg",
+                        "img": "/img/imagenesNosotros/SANDRA.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
                     {
                         "name": "Nicole Huauya",
                         "position": "Customer Service",
-                        "img": "/img/imagenesNosotros/NICOLE.jpg",
+                        "img": "/img/imagenesNosotros/NICOLE.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
                     {
                         "name": "Ingrid Meneses",
                         "position": "Área de Operaciones",
-                        "img": "/img/imagenesNosotros/INGRID.jpg",
+                        "img": "/img/imagenesNosotros/INGRID.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
                     {
                         "name": "Roberto Fuentes",
                         "position": "Área de Operaciones",
-                        "img": "/img/imagenesNosotros/ROBERTO.jpg",
+                        "img": "/img/imagenesNosotros/ROBERTO.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
                     {
                         "name": "Andrea Moscoso",
                         "position": "Ejecutiva Comercial",
-                        "img": "/img/imagenesNosotros/ANDREA.jpg",
+                        "img": "/img/imagenesNosotros/ANDREA.webp",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
@@ -962,7 +967,7 @@
             "pageName": "ImgWithHighLigths",
             "showInMenu": false,
             "data":{
-                "img": "/img/imagenesNosotros/imagenMisionVisionValores.jpg",
+                "img": "/img/imagenesNosotros/img_nosotros.webp",
                 "altImg": "Foto Grupal del equipo de Inversiones D&C",
                 
                 "typeAnimationImg": "fade",

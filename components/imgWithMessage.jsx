@@ -28,14 +28,11 @@ export const ImgWithMessage = (props) => {
                 (props.data.coverScreen ? "imgWithMessageAllScreen" : props.data.isAfterHeader ? "firstOnPageWithHeader" : "")
             }
         >
-            <Image
+            <img
                 src={props.data.img}
                 alt={props.data.altImg ?? "Imagen Hero"}
                 className="imgWithMessage-img"
-                width={1920}
-                height={800}
-                priority={props.data.isAfterHeader}
-                fetchPriority={props.data.isAfterHeader ? "high" : "auto"}
+                loading="eager"
                 sizes="100vw"
             />
             <div className="imgWithMessage-text">
