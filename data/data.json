@@ -844,7 +844,7 @@
                     
                 ],
                 
-                "img": "/img/imagenesNosotros/imagenaaNosotros.webp",
+                "img": "/img/imagenesNosotros/imagenPortada.webp",
                 "altImg": "Foto Grupal del equipo de Inversiones D&C"
             },
             "order": 2
@@ -939,6 +939,14 @@
                         "name": "Andrea Moscoso",
                         "position": "Ejecutiva Comercial",
                         "img": "/img/imagenesNosotros/ANDREA.webp",
+                        "typeAnimation": "up",
+                        "pixelsAnimation": 80
+                    },
+                    {
+                        "name": "Ulises De la Cruz",
+                        "position": "Ejecutivo Comercial",
+                        "img": "/img/imagenesNosotros/ULISES.webp",
+                        "linkedin": "https://www.linkedin.com/in/ulises-augusto-de-la-cruz-flores/",
                         "typeAnimation": "up",
                         "pixelsAnimation": 80
                     },
@@ -1219,12 +1227,6 @@
                     {
                         "icon": "fa fa-solid fa-circle-check",
                         "text": "Transporte Marítimo FCL (Contenedor Completo)",
-                        "typeAnimation": "left",
-                        "pixelsAnimation": 80
-                    },
-                    {
-                        "icon": "fa fa-solid fa-circle-check",
-                        "text": "Transporte Marítimo LCL (Carga Consolidada)",
                         "typeAnimation": "left",
                         "pixelsAnimation": 80
                     },
