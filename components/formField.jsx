@@ -11,6 +11,9 @@ export const FormField = ({ field, value, error, onChange }) => {
         maxLength,
         options,
         defaultOption,
+        allowDecimals,
+        text,
+        description,
         iconAlert,
         errorMessage,
     } = field;
@@ -100,9 +103,38 @@ export const FormField = ({ field, value, error, onChange }) => {
                     })}
                 </>
             );
+        // Título de sección: no guarda valor, solo separa visualmente el formulario.
+        // "text" es el título y "description" (opcional) un texto de apoyo debajo.
+        case "sectionTitle":
+            return (
+                <div className="formCotization-form-section">
+                    <h2 className="formCotization-form-section-title">{text}</h2>
+                    {description && (
+                        <p className="formCotization-form-section-description">{description}</p>
+                    )}
+                </div>
+            );
 
+        // Casilla única (true/false). Si es "required", obliga a marcarla.
+        case "checkbox":
+            return (
+                <div className="formCotization-form-input-container formCotization-form-checkbox-container">
+                    <label htmlFor={name} className="formCotization-form-checkbox">
+                        <input
+                            id={name}
+                            type="checkbox"
+                            checked={!!value}
+                            onChange={(e) => onChange(name, e.target.checked)}
+                            className="formCotization-form-checkbox-input"
+                        />
+                        <span className="formCotization-form-checkbox-text">{label}</span>
+                    </label>
+                    <ErrorBlock />
+                </div>
+            );
         // "text", "tel" y "number" comparten el mismo <input>, "tel" y "number" solo agrega
         // el filtrado de caracteres y los atributos de teclado numérico.
+        // "number" con allowDecimals:true permite un punto y hasta 2 decimales (montos).
         case "number":
             return (
                 <div className="formCotization-form-input-container">
@@ -111,11 +143,13 @@ export const FormField = ({ field, value, error, onChange }) => {
                         type="text"
                         value={value}
                         maxLength={maxLength}
-                        inputMode="numeric"
+                        inputMode={allowDecimals ? "decimal" : "numeric"}
                         autoComplete="off"
                         onChange={(e) => {
                             const raw = e.target.value;
-                            const cleaned = raw.replace(/\D/g, "").slice(0, maxLength);
+                            const cleaned = allowDecimals
+                                ? raw.replace(/[^\d.]/g, "").replace(/^(\d*\.?\d{0,2}).*$/, "$1").slice(0, maxLength)
+                                : raw.replace(/\D/g, "").slice(0, maxLength);
                             onChange(name, cleaned);
                         }}
                         className="formCotization-form-input"

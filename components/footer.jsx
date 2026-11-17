@@ -1,13 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import JsonData from "../data/data.json";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const Footer = (props) => {
     const pathname = usePathname();
     const [email, setEmail] = useState("");
+
+    const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
+    const moreInfoRef = useRef(null);
+
+    // Cierra el aviso al tocar fuera de él o al presionar Escape (útil en celular)
+    useEffect(() => {
+        if (!isMoreInfoOpen) return;
+        const handleClickOutside = (e) => {
+            if (moreInfoRef.current && !moreInfoRef.current.contains(e.target)) {
+                setIsMoreInfoOpen(false);
+            }
+        };
+        const handleEscape = (e) => {
+            if (e.key === "Escape") setIsMoreInfoOpen(false);
+        };
+        document.addEventListener("pointerdown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+        return () => {
+            document.removeEventListener("pointerdown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, [isMoreInfoOpen]);
 
     const onClickSendLetter = async (e) => {
         e.preventDefault();
@@ -175,7 +198,36 @@ export const Footer = (props) => {
                     <h3 className="footer-firstPart-sendLetter-title">
                         {props.data.sendLetter.title}
                     </h3>
-                    <p className="footer-firstPart-sendLetter-description">{props.data.sendLetter.description}</p>
+                    <div className="footer-firstPart-sendLetter-descriptionRow">
+                        <p className="footer-firstPart-sendLetter-description">{props.data.sendLetter.description}</p>
+                        {
+                            props.data.sendLetter.textModalInfo ?
+                                <div
+                                    ref={moreInfoRef}
+                                    className={"footer-firstPart-sendLetter-moreInfo " + (isMoreInfoOpen ? "is-open" : "")}
+                                >
+                                    <button
+                                        type="button"
+                                        className="footer-firstPart-sendLetter-moreInfo-button"
+                                        aria-label="Información sobre el tratamiento de datos personales"
+                                        aria-expanded={isMoreInfoOpen}
+                                        aria-describedby="footer-moreInfo-popover"
+                                        onClick={() => setIsMoreInfoOpen(!isMoreInfoOpen)}
+                                    >
+                                        <i className={"footer-firstPart-sendLetter-moreInfo-icon " + props.data.sendLetter.iconMoreInfo} aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        id="footer-moreInfo-popover"
+                                        role="tooltip"
+                                        className="footer-firstPart-sendLetter-moreInfo-popover"
+                                    >
+                                        {props.data.sendLetter.textModalInfo}
+                                    </div>
+                                </div>
+                            :
+                            ""
+                        }
+                    </div>
                     <form className="footer-firstPart-sendLetter-form" onSubmit={(e)=>{onClickSendLetter(e)}}>
                         <label htmlFor="footer-email-input" className="visually-hidden">
                             Correo electrónico para suscripción
@@ -199,6 +251,22 @@ export const Footer = (props) => {
                     </form>
                 </div>
             </div>
+            {
+                props.data.linkSection && props.data.linkSection.length > 0 ?
+                    <ul className="footer-linkSection">
+                    {
+                        props.data.linkSection.map((link, index)=>(
+                            <li key={link.text + index} className="footer-linkSection-item">
+                                <Link href={link.href} className="footer-linkSection-link">
+                                    {link.text}
+                                </Link>
+                            </li>
+                        ))
+                    }
+                    </ul>
+                :
+                ""
+            }
             <div className="footer-secondPart">
                 <p className="footer-secondPart-copyright">{props.data.copyrightText}</p>
                 <p className="footer-secondPart-brandText">{props.data.brandText}</p>

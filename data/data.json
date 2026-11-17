@@ -2,6 +2,7 @@
     "urlDomain": "https://inversionesdycperu.pe/",
     "ogImage": "https://inversionesdycperu.pe/img/imagenesInicio/imagenOg.jpg",
     "keyWeb3Form": "d8c5e393-1d02-44da-b117-6c14d145e123",
+    "urlSupabaseFunctions": "https://vauknmmesvudylsdtmne.supabase.co/functions/v1",
     "locationCompany": {
         "streetAddress": "Calle Capitán Guitierrez Rondón, 196 - Miraflores, Lima, Perú 15074",
         "addressLocality": "Miraflores",
@@ -174,8 +175,16 @@
                         "href": "https://www.tiktok.com/@inversiones.dyc_logistic"
                     }
                 ],
+                "linkSection": [
+                    {
+                        "text": "Libro de Reclamaciones",
+                        "href": "/libro-reclamaciones"
+                    }
+                ],
                 "sendLetter": {
                     "title": "ENVÍANOS UN CORREO",
+                    "iconMoreInfo": "fa fa-solid fa-circle-info",
+                    "textModalInfo": "Al suscribirse, usted autoriza a Inversiones D&C a tratar su dirección de correo electrónico con la finalidad de enviarle boletines, noticias, invitaciones a eventos, información sobre nuestras actividades y comunicaciones promocionales. Sus datos serán tratados conforme a la Ley N.° 29733, Ley de Protección de Datos Personales, y su reglamento, y almacenados en un banco de datos de titularidad de Inversiones D&C, con las medidas de seguridad necesarias para evitar su pérdida, alteración o acceso no autorizado. Su información no será vendida ni cedida a terceros. Los datos se conservarán mientras mantenga su suscripción. Puede darse de baja en cualquier momento mediante el enlace incluido en cada correo, y ejercer sus derechos de acceso, rectificación, cancelación y oposición (ARCO) escribiendo a clientes@aspemperu.org.pe o acudiendo a Calle Capitán Gutiérrez Rondón 196, Miraflores, Lima, Perú (15074).",
                     "description": "Recibe todas nuestras novedades.",
                     "placeholderEmail": "Tu email",
                     "icon": "fa fa-solid fa-paper-plane"
@@ -1513,6 +1522,94 @@
                 }
             },
             "order": 3
+        }
+    ],
+    "pagesLibroReclamaciones": [
+        {
+            "title": "Libro de Reclamaciones",
+            "href": "#formCotization",
+            "pageName": "FormCotization",
+            "showInMenu": false,
+            "data":{
+                "isAfterHeader": true,
+                "width": "992px",
+                "title": "Libro de Reclamaciones",
+                "description": "Conforme a lo establecido en el Código de Protección y Defensa del Consumidor (Ley N.° 29571), este formulario le permite registrar un reclamo o queja sobre los servicios brindados por Inversiones D&C. Le daremos respuesta al correo electrónico indicado en un plazo no mayor a quince (15) días hábiles.",
+                "useBackend": true,
+                "idCompany": 4,
+                "backendFunction": "responder-reclamo",
+                "fields": [
+                    { "name": "sectionConsumer", "type": "sectionTitle", "text": "1. Identificación del consumidor reclamante" },
+                    { "name": "name", "backendName": "nombre", "type": "text", "placeholder": "Nombres y Apellidos", "maxLength": 150, "required": true, "formLabel": "Nombre"},
+                    {
+                        "name": "typeDocument",
+                        "backendName": "tipo_documento",
+                        "type": "select",
+                        "label": "Tipo de Documento",
+                        "formLabel": "Tipo de Documento",
+                        "defaultOption": "Por favor, escoja un tipo de documento",
+                        "required": true,
+                        "options": [
+                            { "text": "DNI", "value": "DNI" },
+                            { "text": "Carnet de Extranjería", "value": "CE" },
+                            { "text": "Pasaporte", "value": "PASAPORTE" },
+                            { "text": "RUC", "value": "RUC" }
+                        ]
+                    },
+                    { "name": "numberDocument", "backendName": "numero_documento", "type": "text", "placeholder": "Número de Documento", "maxLength": 20, "required": true, "formLabel": "Numero de Documento"},
+                    { "name": "address", "backendName": "domicilio", "type": "text", "placeholder": "Domicilio", "maxLength": 250, "required": true, "formLabel": "Domicilio"},
+                    { "name": "phone", "backendName": "telefono", "type": "tel", "placeholder": "Teléfono Celular", "required": true, "formLabel": "Celular", "maxLength": 20},
+                    { "name": "email", "backendName": "email", "type": "text", "placeholder": "Correo electrónico (aquí recibirá la respuesta)", "required": true, "formLabel": "Email", "maxLength": 150},
+                    { "name": "isMinor", "backendName": "es_menor_edad", "type": "checkbox", "label": "Soy menor de edad", "required": false, "formLabel": "Es Menor de Edad"},
+                    { "name": "nameRepresentative", "backendName": "apoderado_nombre", "type": "text", "placeholder": "Nombres y Apellidos del Padre, Madre o Apoderado", "maxLength": 150, "required": true, "showWhen": "isMinor", "formLabel": "Nombre Apoderado"},
+                    { "name": "sectionGood", "type": "sectionTitle", "text": "2. Identificación del bien contratado" },
+                    {
+                        "name": "typeGood",
+                        "backendName": "tipo_bien",
+                        "type": "select",
+                        "label": "Bien Contratado",
+                        "formLabel": "Bien Contratado",
+                        "defaultOption": "Por favor, escoja si es un producto o servicio",
+                        "required": true,
+                        "options": [
+                            { "text": "Producto", "value": "producto" },
+                            { "text": "Servicio", "value": "servicio" }
+                        ]
+                    },
+                    { "name": "amount", "backendName": "monto_reclamado", "type": "number", "allowDecimals": true, "placeholder": "Monto Reclamado en S/ (opcional)", "maxLength": 12, "required": false, "formLabel": "Monto Reclamado"},
+                    { "name": "descriptionService", "backendName": "descripcion_bien", "type": "textarea", "placeholder": "Describa el producto o servicio contratado", "maxLength": 1000, "required": true, "formLabel": "Descripcion del Bien"},
+                    { "name": "sectionDetail", "type": "sectionTitle", "text": "3. Detalle de la reclamación y pedido del consumidor" },
+                    {
+                        "name": "typeClaim",
+                        "backendName": "tipo",
+                        "type": "select",
+                        "label": "Tipo",
+                        "formLabel": "Tipo",
+                        "defaultOption": "Por favor, escoja si es un reclamo o una queja",
+                        "required": true,
+                        "options": [
+                            { "text": "Reclamo: disconformidad con el producto o servicio", "value": "reclamo" },
+                            { "text": "Queja: malestar o descontento con la atención al público", "value": "queja" }
+                        ]
+                    },
+                    { "name": "detail", "backendName": "detalle", "type": "textarea", "placeholder": "Detalle: describa lo ocurrido", "maxLength": 3000, "required": true, "formLabel": "Detalle Reclamo"},
+                    { "name": "asking", "backendName": "pedido", "type": "textarea", "placeholder": "Pedido: ¿qué solución solicita?", "maxLength": 2000, "required": true, "formLabel": "Detalle Pedido"},
+                    { "name": "acceptTerms", "type": "checkbox", "label": "Declaro que la información consignada es verdadera y que he leído el aviso sobre el tratamiento de mis datos personales.", "required": true, "errorMessage": "Debe marcar esta casilla para enviar su reclamo.", "formLabel": "Acepta Declaracion"}
+                ],
+                "errorMessage": "Este campo es obligatorio.",
+                "errorMessageLength1stPart": "Por favor ingrese los ",
+                "errorMessageLength2ndPart": " dígitos correspondientes.",
+                "alertForm": "Sus datos personales serán utilizados únicamente para registrar, gestionar y dar respuesta a su reclamo o queja, conforme a la Ley N.° 29733, Ley de Protección de Datos Personales. La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.",
+                "iconAlert": "fa fa-solid fa-triangle-exclamation",
+                "messageSuccess": "✅ Su reclamo fue registrado correctamente.",
+                "successTitle": "Su reclamo fue registrado con el código:",
+                "messageSuccessBackend": "Guarde este código para cualquier consulta. Le daremos respuesta en su correo electrónico a más tardar el {fechaLimite}.",
+                "messageNoEmail": "No pudimos enviarle la constancia por correo. Por favor, guarde el código mostrado arriba; su reclamo sí quedó registrado.",
+                "messageErrorSend": "❌ Hubo un error al registrar su reclamo, inténtelo más tarde.",
+                "buttonSendForm": "Enviar Reclamo",
+                "buttonSendingForm": "Enviando..."
+            },
+            "order": 2
         }
     ],
     "pagesDownloadApp":[

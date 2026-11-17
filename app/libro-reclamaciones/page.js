@@ -1,0 +1,36 @@
+import JsonData from "../../data/data.json";
+import ImgWithMessage from "@/components/imgWithMessage";
+import FrequentQuestions from "@/components/frequentQuestions";
+import FormCotization from "@/components/formCotization";
+
+export const metadata = {
+    title: "Libro de Reclamaciones",
+    description: "Libro de Reclamaciones de Rancho Roma",
+    alternates: {
+        canonical: "/libro-reclamaciones",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
+export const LibroReclamaciones = () => {
+    const pages = [];
+    for (const page of JsonData.pagesLibroReclamaciones) {
+        if (page.pageName === "ImgWithMessage"){
+            pages.push({e: <ImgWithMessage data={page.data} key={page.pageName + page.order}/>, order: page.order});
+        }else if (page.pageName === "FrequentQuestions"){
+            pages.push({e: <FrequentQuestions data={page.data} key={page.pageName + page.order}/>, order: page.order});
+        }else if (page.pageName === "FormCotization"){
+            pages.push({e: <FormCotization data={page.data} key={page.pageName + page.order}/>, order: page.order});
+        }
+    }
+    pages.sort((a, b) => a.order - b.order);
+    return (
+        <div>
+            {pages.map((p) => p.e)}
+        </div>
+    )
+}
+export default LibroReclamaciones;
